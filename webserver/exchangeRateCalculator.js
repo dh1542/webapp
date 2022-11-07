@@ -1,4 +1,4 @@
-const { addAbortSignal } = require("stream")
+import fetch from "node-fetch";
 
 class exhangeRateCalculator {
     // exchange rates
@@ -26,6 +26,8 @@ class exhangeRateCalculator {
 
     /** updates exchange rate */
     async fetchCurrentExhangeRates(){
+        const resp = await fetch('https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist.xml?3392da9c043c921107ed495d3b5b2426')
+            .then(data => console.log(data.text()))
                 
     }
 
@@ -34,5 +36,9 @@ class exhangeRateCalculator {
 
 
 }
+
+var exchangeRateCalculator = new exhangeRateCalculator();
+exchangeRateCalculator.fetchCurrentExhangeRates()
+console.log(exchangeRateCalculator)
 
 

@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "serve",
+			"path": "website_final/webpage_final",
+			"problemMatcher": [],
+			"label": "npm: serve - website_final/webpage_final",
+			"detail": "vue-cli-service serve"
+		}
+	]
+}
